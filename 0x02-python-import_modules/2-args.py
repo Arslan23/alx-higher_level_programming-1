@@ -2,12 +2,12 @@
 if __name__ == "__main__":
     import sys
     i = 0
-    l = len(sys.argv) - 1
-    if l == 0:
+    argv_count = len(sys.argv) - 1
+    if argv_count == 0:
         print("0 argument.")
-    elif l == 1:
+    elif argv_count == 1:
         print("1 argument:")
     else:
-        print("{} arguments:".format(l))
-    for i in range(l):
+        print("{} arguments:".format(argv_count))
+    for i in range(argv_count):
         print("{}: ".format(i + 1) + "{}".format(sys.argv[i + 1]))
