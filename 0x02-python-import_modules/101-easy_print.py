@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import sys
-import real_print
+from sys import stdout
+stdout.write(str("#pythoniscool") + '\n')
