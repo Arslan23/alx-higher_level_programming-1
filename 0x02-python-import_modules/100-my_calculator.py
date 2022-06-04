@@ -5,7 +5,6 @@ if __name__ == "__main__":
 
     def isnumeric(charr):
         """Function to check if is numeric
-
         Args:
             _char: String to check
         Returns:
@@ -27,6 +26,7 @@ if __name__ == "__main__":
     argv_count = len(sys.argv) - 1
     if argv_count != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
     else:
         operator = sys.argv[2]
         a = sys.argv[1]
@@ -34,9 +34,11 @@ if __name__ == "__main__":
         if operator != "+" and operator != "-\
 " and operator != "*" and operator != "/":
             print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
         else:
             if not isnumeric(a) or not isnumeric(b):
                 print("NaN. Variable error")
+                exit(1)
             else:
                 if operator == "+":
                     print("{} {} {} = {}\
@@ -52,3 +54,5 @@ if __name__ == "__main__":
 ".format(a, operator, b, int(a) / int(b)))
                 else:
                     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+                    exit(1)
+                exit(0)
