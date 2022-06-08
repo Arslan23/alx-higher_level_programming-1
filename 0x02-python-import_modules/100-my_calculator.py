@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    import calculator_1
+    from calculator_1 import add, sub, mul, div
 
     def isnumeric(charr):
         """Function to check if is numeric
@@ -42,16 +42,16 @@ if __name__ == "__main__":
             else:
                 if operator == "+":
                     print("{} {} {} = {}\
-".format(a, operator, b, int(a) + int(b)))
+".format(a, operator, b, add(int(a), int(b))))
                 elif operator == "-":
                     print("{} {} {} = {}\
-".format(a, operator, b, int(a) - int(b)))
+".format(a, operator, b, sub(int(a), int(b))))
                 elif operator == "*":
                     print("{} {} {} = {}\
-".format(a, operator, b, int(a) * int(b)))
+".format(a, operator, b, mul(int(a), int(b))))
                 elif (operator == "/" and int(b) != 0):
                     print("{} {} {} = {}\
-".format(a, operator, b, int(a) / int(b)))
+".format(a, operator, b, div(int(a), int(b))))
                 else:
                     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
                     exit(1)
