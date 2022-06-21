@@ -1,3 +1,9 @@
 #!/usr/bin/python3
-def raise_exception_msg(message=""):
-    raise NameError(message)
+def safe_function(fct, *args):
+    import sys
+    try:
+        ret = fct(*args)
+        return ret
+    except Exception as e:
+        print("Exception: {}".format(e), file=sys.stderr)
+        return None
