@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-
-def sdef safe_print_integer(value):
+def safe_print_integer(value):
     try:
-        print("{:d}".format(int(value)), end="")
-    except ValueError:
-        return false
-    else:
-        return true
+        print("{:d}".format(value))
+        return True
+    except:
+        return False
