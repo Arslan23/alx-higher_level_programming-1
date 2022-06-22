@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-'''defines a square with private attribute size
+'''defines a square
 '''
 class Square:
     '''represent a square'''
     def __init__(self,size):
-        '''empty block'''
-        pass
+        '''Init new Square
+        Args: size:
+            size(int) : Size of the new Square
+        '''
+        self.__size = size
