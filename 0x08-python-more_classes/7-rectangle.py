@@ -69,7 +69,7 @@ class Rectangle:
 			return representation
 		for i in range(1,self.__height + 1):
 			for j in range (1,self.__width + 1):
-				representation = representation + "#"
+				representation = representation + self.print_symbol
 			representation = representation + "\n"
 		return representation
 
