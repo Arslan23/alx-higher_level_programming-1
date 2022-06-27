@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-'''An empty class Rectangle that defines a rectangle'''
+"""Defines a class Rectangle."""
 
 
-class Rectangle:
-    '''Class tha represent a Rectangle'''
-    __init__(self):
-        pass
+class Square:
+    """Represents a Rectangle. No body."""
+    pass
