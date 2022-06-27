@@ -4,4 +4,5 @@
 
 class Rectangle:
     '''Class tha represent a Rectangle'''
-    pass
+    __init__(self):
+        pass
