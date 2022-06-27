@@ -1,11 +1,17 @@
 #!/usr/bin/python3
-'''An empty class Rectangle that defines a rectangle'''
+"""Module 0-rectangle
+Defines an empty Rectangle class.
+"""
 
 
 class Rectangle:
-    '''Class tha represent a Rectangle'''
+    """Represent a rectangle."""
     __init__(self, width=0, height=0):
-        ''' '''
+        ''' Init new Rectangle
+        Args: 
+            width: int
+            height: int
+        '''
         self.__width = width
         self.__height = height
 
@@ -16,9 +22,12 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        '''Set width'''
+        '''Set width
+        Args:
+            value: int, value of width
+        '''
         try:
-            if isinsert(value, int):
+            if isinstance(value, int):
                 if value <= 0:
                     raise ValueError("width must be >= 0")
                 else:
@@ -33,9 +42,12 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        '''Set height'''
+        '''Set height
+        Args: 
+            value: int, value of height
+        '''
         try:
-            if isinsert(value, int):
+            if isinstance(value, int):
                 if value <= 0:
                     raise ValueError("height must be >= 0")
                 else:
