@@ -71,11 +71,7 @@ class Rectangle:
 	def __repr__(self):
 	'''Methode print Rectangle with #
 	Return: representation'''
-		representation = ""
-		if f self.__height <= 0 or self.__width <= 0:
-			return representation
-		for i in range(1,self.__height + 1):
-			for j in range (1,self.__width + 1):
-				representation = representation + "#"
-			representation = representation + "\n"
+		representation = Rectangle()
+		if self.__height <= 0 or self.__width <= 0:
+			representation = self
 		return representation

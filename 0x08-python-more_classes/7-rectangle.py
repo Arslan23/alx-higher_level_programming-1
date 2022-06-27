@@ -3,10 +3,15 @@
 
 class Rectangle:
 	'''Class tha represent a Rectangle'''
+	number_of_instances = 0
+	print_symbol = "#"
+
+
 	__init__(self, width = 0, height = 0):
 		''' '''
 		self.__width = width
 		self.__height = height
+		number_of_instances += 1
 
 	@property
 	def width(self):
@@ -78,5 +83,9 @@ class Rectangle:
 
 	def __del__(self):
 	'''Methode delete Rectangle'''
-		print("Bye rectangle...")
+		try:
+			number_of_instances -= 1
+			print("Bye rectangle...")
+		except Exception:
+			print("No instance of Rectangle")
 		
