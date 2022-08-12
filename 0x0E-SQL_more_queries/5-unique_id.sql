@@ -1,3 +1,3 @@
 -- creates the table unique_id
 USE @database_name;
-CREATE TABLE IF NOT EXISTS unique_id (`id` INT NOT NULL UNIQUE DEFAULT 1, `name` VARCHAR(256));
+CREATE TABLE IF NOT EXISTS `unique_id` (`id` INT NOT NULL UNIQUE DEFAULT 1, `name` VARCHAR(256));
