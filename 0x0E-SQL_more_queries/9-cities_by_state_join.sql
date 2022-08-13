@@ -1,3 +1,6 @@
 -- lists all cites 
-SELECT `cities.id`,`cities.name`, `states.name`
-FROM cities INNER JOIN states ON states.id = cities.state_id ORDER BY cities.id
+SELECT c.`id`, c.`name`, s.`name`
+  FROM `cities` AS c
+       INNER JOIN `states` AS s
+       ON c.`state_id` = s.`id`
+ ORDER BY c.`id`;
